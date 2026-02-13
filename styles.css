@@ -1,0 +1,505 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Poiret One", sans-serif;
+    font-size: 2em;
+}
+
+h2 {
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.75em;
+}
+
+h3 {
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.5em;
+}
+
+p,a{
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.25em;
+}
+
+header{
+    max-height: 150px;
+}
+
+#logo-container{
+    max-height: inherit;
+    padding: unset;
+}
+
+#nav-logo {
+    display: flex;
+    width: auto;
+    max-height: inherit;
+    padding: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav{
+    object-position: bottom;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0 2%;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li{
+    display: inline;
+    margin: 0 2%;
+}
+
+nav a, footer a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #003D4C;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+nav a:hover{
+    background-color: #CBC096;
+}
+
+.current{
+    background-color: #CBC096;
+}
+
+.booking-wrapper{
+    display: block !important;
+}
+
+.booking{
+    justify-content: center;
+    text-align: center;
+    border:#003D4C solid 3px;
+    border-radius: 20px;
+    background-color: #ece7d8;
+    margin-bottom: 10px !important;
+}
+
+.booking h2, .bio h2{
+    font-family: "Rock Salt", cursive;
+    padding: 10px 0;
+    font-weight: 600;
+}
+
+.booking p{
+    padding: 10px 0;
+    font-weight: 600;
+}
+
+.booking img, .bio img{
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+}
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+}
+
+.bio img {
+    display: block;
+    margin: 0 auto; 
+}
+
+.bio-story{
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    text-align: center;
+    background-color: rgba(203, 192, 150, .5);
+    border-radius: 30px;
+    font-size: 1.5em;
+    padding: 0 1%;
+}
+
+.bio-story p{
+    padding: 30px 1%;
+}
+
+#form-wrapper{
+    min-height: 75vh;
+    border:#003D4C solid 3px;
+    border-radius: 20px;
+    background-color: #ece7d8;
+}
+
+form h2{
+    margin-bottom: 3%;
+    font-weight: bolder;
+    text-align: center;
+}
+
+form [id^="form-"]{
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+}
+
+form label{
+    width: 20%;
+    font-family: "Poiret One", sans-serif;
+    font-size: large;
+    font-weight: bolder;
+}
+
+form input, form select, form textarea{
+    width: inherit;
+    padding: 12px;
+    border: #003D4C solid 1px;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: "Poiret One", sans-serif;
+    font-weight: bolder;
+    font-size: 1em;
+}
+
+form textarea{
+    height: 150px;
+}
+
+#form-summary{
+    min-height: 75vh;
+    align-items: flex-start;
+}
+
+#summary-wrapper{
+    border:#003D4C solid 3px;
+    border-radius: 20px;
+    background-color: #ece7d8;
+}
+
+#summary-wrapper h2{
+    font-family: "Rock Salt", cursive;
+    padding: 15px 0;
+    text-align: center;
+}
+
+#summary-wrapper p{
+    padding: 10px 5%;
+    font-weight: bolder;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-height: 800px;
+    overflow: hidden;
+    display: flex;
+}
+  
+/* Hide the images by default */
+.mySlides {
+    width: 100%;
+    height: 100%; /* Match parent height */
+    display: flex;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.mySlides img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+  
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 1s ease-in-out;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+/* Position the dots at the bottom of the slideshow */
+.dot-container {
+    position: absolute;
+    bottom: 20px; /* Adjust this value as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between dots */
+    z-index: 10;
+}
+
+/* Style for dots */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 1s ease-in-out;
+}
+
+/* Active dot styling */
+.active, .dot:hover {
+    background-color: white;
+}
+  
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.testimonial{
+    /*background-color: #FFF4BF;*/
+    border: #003D4C solid 2px;
+    border-radius: 20px;
+    margin-top: 20px !important;
+}
+
+.testimonial img{
+    width: 100%;
+    max-height: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.testimonial p{
+  font-size: xx-large;
+  text-align: center;
+  color: #003D4C;
+}
+
+footer{
+    background-color: #003D4C;
+    color: white;
+}
+
+footer a{
+    color:#CBC096
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+#footer-right{
+    text-align: right;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+button{
+    padding: 2% 5%;
+    background-color: #003D4C;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    font-family: "Poiret One", sans-serif;
+    font-weight: bolder;
+    font-size: 1em;
+}
+
+/* Remove float from the col- classes */
+[class*="col-"] {
+    padding: 15px;
+    /*border: 2px solid red; /* Optional: used for debugging */
+}
+
+
+.row {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center the row */
+    padding: 10px 0px; /* Optional: Add padding */
+}
+
+.banner{
+    background-color: #003D4C;
+}
+
+.banner h1 {
+    text-align: center;
+    font-family: "Rock Salt", cursive;
+    font-size: 3em;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.secondary-banner h1{
+    text-align: center;
+    font-family: "Rock Salt", cursive;
+    font-size: 2.5em;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: #003D4C;
+}
+
+.secondary-banner{
+    border-bottom: #003D4C solid 8px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.call-to-action{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: rgba(203, 192, 150, .5);
+    border-radius: 30px;
+}
+
+.call-to-action p{
+    font-size: xx-large;
+}
+
+.call-to-action h3{
+    font-family: "Rock Salt", cursive;
+    padding: 2%;
+}
+
+aside{
+    text-align: center;
+}
+
+/* Responsive Grid View */
+
+/* Desktop */
+@media only screen and (min-width: 1025px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+/* Tablets */
+@media only screen and (max-width: 1024px) and (min-width: 481px) {
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+
+/* Phones */
+@media only all and (max-width: 480px) and (min-width: 10px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+
+    nav ul{
+        list-style-type: none;
+        margin: 0 9%;
+        display: block;
+        float: right;
+        width: inherit;
+    }
+    
+    nav ul li{
+        display: block;
+        margin: 5px 3%;
+        font-size: medium;
+    }
+
+    .call-to-action p{
+        font-size: 1.25em;
+    }
+
+    .banner h1{
+        font-size: 1.75em;
+    }
+
+    .secondary-banner h1{
+        font-size: 1.75em;
+    }
+
+    .testimonial p{
+        font-size: 1.25em;
+    }
+
+    .booking h2{
+        font-size: 1em;
+    }
+
+    .booking p{
+        font-size: .8em;
+    }
+
+    .booking{
+        display: block !important;
+    }
+
+    .bio-story p{
+        font-size: 1em;
+        padding: 20px 1%;
+    }
+
+    .bio h2{
+        font-size: 1.25em;
+    }
+}
